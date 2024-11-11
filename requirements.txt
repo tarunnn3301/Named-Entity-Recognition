@@ -1,0 +1,8 @@
+protobuf
+tiktoken
+sentencepiece
+transformers[torch]
+evaluate
+seqeval
+pytorch-crf
+sklearn_crfsuite
