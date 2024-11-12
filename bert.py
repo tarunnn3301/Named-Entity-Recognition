@@ -5,7 +5,7 @@ from evaluate import load
 import pandas as pd
 
 # Load the tokenizer
-tokenizer = BertTokenizerFast.from_pretrained('bert-base-uncased')
+tokenizer = BertTokenizerFast.from_pretrained('bert-base-multilingual-cased')
 
 # Function to load and prepare data
 def load_data(filename):
@@ -139,7 +139,7 @@ def compute_metrics(p):
 
 # Define the Trainer
 trainer = Trainer(
-    model=BertForTokenClassification.from_pretrained('bert-base-uncased', num_labels=len(tag_map)),
+    model=BertForTokenClassification.from_pretrained('bert-base-multilingual-cased', num_labels=len(tag_map)),
     args=training_args,
     train_dataset=train_dataset,
     eval_dataset=val_dataset,
